@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "City Marathon 2024",
+    "start_registration": "01-01-2024",
+    "end_registration": "15-02-2024",
+    "start_date": "01-03-2024",
+    "location": "Central Park, NY",
+    "distance": "10 km",
+    "description": "A thrilling marathon through the heart of the city.",
+    "organizer_name": "Urban Sports Club",
+    "image_link": "https://i.ibb.co.com/9GyXYsh/1m.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Beachside Fun Run",
+    "start_registration": "10-02-2024",
+    "end_registration": "01-03-2024",
+    "start_date": "15-03-2024",
+    "location": "Santa Monica Beach, CA",
+    "distance": "5 km",
+    "description": "A relaxing yet energetic run along the beach.",
+    "organizer_name": "Coastal Athletics",
+    "image_link": "https://i.ibb.co.com/vcL3H23/2m.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Mountain Challenge",
+    "start_registration": "01-03-2024",
+    "end_registration": "25-03-2024",
+    "start_date": "05-04-2024",
+    "location": "Rocky Mountains, CO",
+    "distance": "15 km",
+    "description": "Test your endurance on this high-altitude course.",
+    "organizer_name": "Peak Performance Runners",
+    "image_link": "https://i.ibb.co.com/Z1Rzw0j/3m.jpg"
+  },
+  {
+    "id": 4,
+    "title": "City Night Run",
+    "start_registration": "01-04-2024",
+    "end_registration": "20-04-2024",
+    "start_date": "01-05-2024",
+    "location": "Downtown, Chicago",
+    "distance": "7 km",
+    "description": "Enjoy the dazzling city lights while running at night.",
+    "organizer_name": "Night Owls Racing Club",
+    "image_link": "https://i.ibb.co.com/PjjhNZ0/4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Riverside Marathon",
+    "start_registration": "01-05-2024",
+    "end_registration": "30-05-2024",
+    "start_date": "10-06-2024",
+    "location": "Hudson River, NY",
+    "distance": "21 km",
+    "description": "Experience the scenic riverside while pushing your limits.",
+    "organizer_name": "Hudson Runners Club",
+    "image_link": "https://i.ibb.co.com/Ph8mKK7/5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Spring Trail Run",
+    "start_registration": "01-06-2024",
+    "end_registration": "25-06-2024",
+    "start_date": "01-07-2024",
+    "location": "Blue Ridge Parkway, NC",
+    "distance": "12 km",
+    "description": "Run through blooming trails surrounded by nature.",
+    "organizer_name": "Trail Blazers",
+    "image_link": "https://i.ibb.co.com/YXjDYKL/6.jpg"
+  }
+]
