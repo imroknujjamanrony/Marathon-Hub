@@ -5,8 +5,10 @@ import { Helmet } from "react-helmet-async";
 import useAxiosSecure from "../hook/useAxiosSecure";
 import Swal from "sweetalert2";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
+import Loading from "./Loading";
 
 const MyMarathon = () => {
+  const [loading, setLoading] = useState(true);
   const axiosSecure = useAxiosSecure();
   const [marathons, setMarathons] = useState([]);
   const [selectedMarathon, setSelectedMarathon] = useState(null);
@@ -16,6 +18,7 @@ const MyMarathon = () => {
 
   useEffect(() => {
     const fetchMarathons = async () => {
+      setLoading(true);
       try {
         const response = await axiosSecure.get(
           `/marathons/by-email?email=${user.email}`
@@ -23,12 +26,18 @@ const MyMarathon = () => {
         setMarathons(response.data);
       } catch (error) {
         console.error("Error fetching marathons:", error);
+      } finally {
+        setLoading(false);
       }
     };
     if (user?.email) {
       fetchMarathons();
     }
   }, [user?.email]);
+
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   const handleUpdate = (marathon) => {
     setSelectedMarathon(marathon);

@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { CountdownCircleTimer } from "react-countdown-circle-timer"; // Import the countdown component
+import Loading from "./swiper/Loading";
 
 const MarathonDetails = () => {
   const { id } = useParams();
@@ -32,7 +33,7 @@ const MarathonDetails = () => {
   }, [id]);
 
   if (loading || !marathon) {
-    return <div>Loading...</div>;
+    return <Loading></Loading>;
   }
 
   // Calculate time remaining in seconds for the countdown

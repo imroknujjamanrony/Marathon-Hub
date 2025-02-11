@@ -4,8 +4,10 @@ import Swal from "sweetalert2"; // Import SweetAlert2 for alerts
 import { FaEdit, FaTrashAlt } from "react-icons/fa"; // Import React Icons for Edit and Delete
 import { Helmet } from "react-helmet-async";
 import useAxiosSecure from "../hook/useAxiosSecure";
+import Loading from "./Loading";
 
 const MyApplyList = () => {
+  const [loading, setLoading] = useState(true);
   const { user } = UseAuth();
   const axiosSecure = useAxiosSecure(); // Use the custom Axios instance
   const [registrations, setRegistrations] = useState([]);
@@ -17,6 +19,7 @@ const MyApplyList = () => {
 
   useEffect(() => {
     const fetchRegistrations = async () => {
+      setLoading(true);
       try {
         const response = await axiosSecure.get(
           `/registrations/by-email?email=${user.email}&${
@@ -26,12 +29,17 @@ const MyApplyList = () => {
         setRegistrations(response.data);
       } catch (error) {
         console.error("Error fetching registrations:", error);
+      } finally {
+        setLoading(false);
       }
     };
     if (user?.email) {
       fetchRegistrations();
     }
   }, [user?.email, searchQuery, isLocationFilter, axiosSecure]);
+  if (loading) {
+    return <Loading></Loading>;
+  }
 
   const handleUpdate = (registration) => {
     setSelectedRegistration(registration);
@@ -106,7 +114,10 @@ const MyApplyList = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <button className="btn btn-primary" onClick={handleFilterToggle}>
+          <button
+            className="btn bg-[#0078D4] text-white"
+            onClick={handleFilterToggle}
+          >
             {isLocationFilter ? "Filter by Title" : "Filter by Location"}
           </button>
         </div>

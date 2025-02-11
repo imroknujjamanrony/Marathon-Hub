@@ -4,8 +4,10 @@ import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 import { FaSortAmountDown, FaSortAmountUp } from "react-icons/fa";
 import useAxiosSecure from "../components/hook/useAxiosSecure";
+import Loading from "../components/swiper/Loading";
 
 const Marathons = () => {
+  const [loading, setLoading] = useState(true); // ✅ Initially true to show loading spinner
   const [marathons, setMarathons] = useState([]);
   const [sortOrder, setSortOrder] = useState("desc"); // Default sortOrder
   const navigate = useNavigate();
@@ -14,18 +16,26 @@ const Marathons = () => {
   // Fetch marathons data
   useEffect(() => {
     const fetchMarathons = async () => {
+      setLoading(true); // ✅ Start loading before fetching
       try {
         const response = await axiosSecure.get(
           `/allMarathons?sortOrder=${sortOrder}`
         );
         setMarathons(response.data);
       } catch (error) {
-        Swal.fire("Error!", "Unable to fetch marathons.", error.message);
+        Swal.fire("Error!", "Unable to fetch marathons.", "error");
+      } finally {
+        setLoading(false); // ✅ Stop loading after fetching
       }
     };
 
     fetchMarathons();
   }, [sortOrder]); // Re-fetch when sortOrder changes
+
+  // ✅ Always show spinner until data loads
+  if (loading) {
+    return <Loading />;
+  }
 
   // Toggle sorting order
   const toggleSortOrder = () => {
