@@ -21,7 +21,7 @@ const RunningMarathon = () => {
   }, []);
 
   return (
-    <div className="p-8 bg-gray-100 text-[#1C1C1C]">
+    <div className="p-8 bg-gray-100 dark:bg-gray-900 text-[#1C1C1C]">
       <h2 className="text-3xl font-bold mb-6 text-center text-[#002D62]">
         Available Marathons
       </h2>

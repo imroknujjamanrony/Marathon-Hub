@@ -1,7 +1,7 @@
 const AboutMarathon = () => {
   return (
     <div
-      className="w-11/12 mx-auto text-center rounded-lg  py-16  bg-gray-100 text-gray-800 dark:text-gray-200"
+      className="w-11/12 mx-auto text-center rounded-lg  py-16 dark:bg-gray-900  bg-gray-100 text-gray-800 dark:text-gray-200"
       data-aos="fade-up"
     >
       <h2 className="text-4xl md:text-5xl font-extrabold text-[#002e62]">

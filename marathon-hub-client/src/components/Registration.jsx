@@ -59,7 +59,10 @@ const Registration = () => {
   return (
     <div className="p-8">
       <h2 className="text-3xl font-bold mb-6">Register for {marathon.title}</h2>
-      <form onSubmit={handleRegister} className="mt-6 bg-gray-100 p-4 rounded">
+      <form
+        onSubmit={handleRegister}
+        className="mt-6 bg-gray-100 dark:bg-gray-900 p-4 rounded"
+      >
         <div className="mb-4">
           <label className="block text-gray-700">Email</label>
           <input

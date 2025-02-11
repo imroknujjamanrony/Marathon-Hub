@@ -13,7 +13,7 @@ const Home = () => {
         <title>Marathon Hub</title>
       </Helmet>
       <Slider></Slider>
-      <section className="bg-gray-100 text-white py-12">
+      <section className="bg-gray-100 dark:bg-gray-900 text-white py-12">
         <AboutMarathon></AboutMarathon>
         <Legacy></Legacy>
         <RunningMarathon></RunningMarathon>
