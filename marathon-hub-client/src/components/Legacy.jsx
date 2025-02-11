@@ -28,9 +28,6 @@ const Legacy = () => {
           impactful events where every mile matters and every runner’s effort
           counts.
         </p>
-        <button className="mt-4 px-6 py-2 bg-[#005F99] text-white rounded-lg hover:bg-[#004B7C] transition duration-300">
-          See More
-        </button>
       </div>
     </div>
   );

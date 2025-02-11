@@ -12,6 +12,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import MarathonDetails from "../components/MarathonDetails";
 import Registration from "../components/Registration";
 import Error from "../components/Error";
+import MyProfile from "../pages/MyProfile";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,16 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
+
+      {
+        path: "myProfile",
+        element: (
+          <PrivateRoutes>
+            <MyProfile></MyProfile>
+          </PrivateRoutes>
+        ),
+      },
+
       {
         path: "/marathons",
         element: (

@@ -13,7 +13,7 @@ const UpcomingMarathons = () => {
 
   return (
     <div className="bg-gray-100 py-8">
-      <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+      <h1 className="text-3xl font-bold mb-6 text-center text-[#002D62]">
         Upcoming Marathons
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8">
@@ -31,22 +31,23 @@ const UpcomingMarathons = () => {
               <h2 className="text-xl font-semibold text-[#00509D] mb-2">
                 {marathon.title}
               </h2>
+              <p className="text-sm text-gray-700 mb-4">
+                {marathon.description}
+              </p>
               <p className="text-sm text-gray-600 mb-2">
                 <span className="font-bold">Location:</span> {marathon.location}
               </p>
               <p className="text-sm text-gray-600 mb-2">
                 <span className="font-bold">Distance:</span> {marathon.distance}
               </p>
-              <p className="text-sm text-gray-600 mb-2">
+              {/* <p className="text-sm text-gray-600 mb-2">
                 <span className="font-bold">Registration:</span>{" "}
                 {marathon.start_registration} - {marathon.end_registration}
               </p>
               <p className="text-sm text-gray-600 mb-4">
                 <span className="font-bold">Date:</span> {marathon.start_date}
-              </p>
-              <p className="text-sm text-gray-700 mb-4">
-                {marathon.description}
-              </p>
+              </p> */}
+
               <p className="text-sm font-medium text-gray-800">
                 <span className="font-bold">Organizer:</span>{" "}
                 {marathon.organizer_name}

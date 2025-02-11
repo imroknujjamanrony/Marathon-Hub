@@ -27,7 +27,7 @@ const Slider = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-              <h2 className="text-5xl font-bold">
+              <h2 className="text-5xl text-[#FFD95F] font-bold">
                 <Typewriter
                   words={[
                     "Run for Hope: Annual Charity Marathon",
@@ -42,7 +42,7 @@ const Slider = () => {
                   delaySpeed={1000}
                 />
               </h2>
-              <p className="text-2xl font-medium">
+              <p className="text-2xl text-white pb-3 font-medium">
                 Join the ultimate challenge.
               </p>
               <Link to={"/marathons"}>
@@ -64,7 +64,7 @@ const Slider = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-              <h2 className="text-5xl font-bold">
+              <h2 className="text-5xl text-[#FFD95F] font-bold">
                 <Typewriter
                   words={[
                     "Run for Hope: Annual Charity Marathon",
@@ -79,7 +79,7 @@ const Slider = () => {
                   delaySpeed={1000}
                 />
               </h2>
-              <p className="text-2xl font-medium">
+              <p className="text-2xl text-white pb-3 font-medium">
                 Experience the joy of running together.
               </p>
               <Link to={"/marathons"}>
@@ -101,7 +101,7 @@ const Slider = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-              <h2 className="text-5xl font-bold">
+              <h2 className="text-5xl text-[#FFD95F] font-bold">
                 <Typewriter
                   words={[
                     "Run for Hope: Annual Charity Marathon",
@@ -116,7 +116,9 @@ const Slider = () => {
                   delaySpeed={1000}
                 />
               </h2>
-              <p className="text-2xl font-medium">Push your limits.</p>
+              <p className="text-2xl text-white pb-3 font-medium">
+                Push your limits.
+              </p>
               <Link to={"/marathons"}>
                 <button className="btn btn-sm bg-[#0078D4] btn-outline text-white hover:bg-red-600">
                   See Marathons

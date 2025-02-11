@@ -1,4 +1,3 @@
-//after added tooltip
 import { Link, NavLink } from "react-router-dom";
 import UseAuth from "../context/UseAuth";
 import Swal from "sweetalert2";
@@ -21,6 +20,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Left: Logo and Dropdown */}
         <div className="flex items-center gap-4">
+          {/* Mobile Menu Dropdown */}
           <div className="dropdown lg:hidden">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
@@ -52,6 +52,13 @@ const Navbar = () => {
                   Dashboard
                 </NavLink>
               </li>
+              {user && (
+                <li>
+                  <NavLink to="/myProfile" className="hover:text-gray-300">
+                    Profile
+                  </NavLink>
+                </li>
+              )}
             </ul>
           </div>
 
@@ -62,7 +69,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Right: User Info */}
+        {/* Right: Navigation Links & User Info */}
         <div className="flex items-center gap-4">
           <div className="hidden lg:flex gap-4">
             <NavLink to="/marathons" className="hover:text-gray-300">
@@ -71,6 +78,31 @@ const Navbar = () => {
             <NavLink to="/dashboard" className="hover:text-gray-300">
               Dashboard
             </NavLink>
+            {user && (
+              <>
+                <NavLink to="/myProfile" className="hover:text-gray-300">
+                  Profile
+                </NavLink>
+                <NavLink
+                  to="/dashboard/addMarathon"
+                  className="hover:text-gray-300"
+                >
+                  Add Marathon
+                </NavLink>
+                <NavLink
+                  to="/dashboard/myMarathon"
+                  className="hover:text-gray-300"
+                >
+                  My Marathon
+                </NavLink>
+                <NavLink
+                  to="/dashboard/myApplylist"
+                  className="hover:text-gray-300"
+                >
+                  My Applylist
+                </NavLink>
+              </>
+            )}
           </div>
 
           {user ? (

@@ -40,6 +40,9 @@ const RunningMarathon = () => {
               <h3 className="text-xl font-bold text-[#00509D]">
                 {marathon.title}
               </h3>
+              <p className="text-gray-700">
+                Description: {marathon.description}
+              </p>
               <p className="text-gray-700">Location: {marathon.location}</p>
               <p className="text-gray-700">
                 Registration:{" "}
