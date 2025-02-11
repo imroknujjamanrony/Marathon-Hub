@@ -1,6 +1,7 @@
 const Legacy = () => {
   return (
     <div
+      id="about"
       className="flex flex-col md:flex-row gap-6 bg-white p-6 md:p-8 rounded-sm shadow-lg backdrop-blur-lg"
       data-aos="flip-down"
     >
