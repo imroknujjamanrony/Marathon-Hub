@@ -9,7 +9,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Slider = () => {
   return (
-    <div className="py-12">
+    <div className="py-3">
       <Swiper
         spaceBetween={20}
         modules={[Navigation, Autoplay]}
@@ -45,6 +45,11 @@ const Slider = () => {
               <p className="text-2xl font-medium">
                 Join the ultimate challenge.
               </p>
+              <Link to={"/marathons"}>
+                <button className="btn btn-sm bg-[#0078D4] btn-outline text-white hover:bg-red-600">
+                  See Marathons
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -77,6 +82,11 @@ const Slider = () => {
               <p className="text-2xl font-medium">
                 Experience the joy of running together.
               </p>
+              <Link to={"/marathons"}>
+                <button className="btn btn-sm bg-[#0078D4] btn-outline text-white hover:bg-red-600">
+                  See Marathons
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
@@ -107,6 +117,11 @@ const Slider = () => {
                 />
               </h2>
               <p className="text-2xl font-medium">Push your limits.</p>
+              <Link to={"/marathons"}>
+                <button className="btn btn-sm bg-[#0078D4] btn-outline text-white hover:bg-red-600">
+                  See Marathons
+                </button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
