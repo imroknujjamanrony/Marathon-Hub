@@ -28,7 +28,7 @@ const UpcomingMarathons = () => {
               className="rounded-t-lg h-48 w-full object-cover"
             />
             <div className="p-4">
-              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+              <h2 className="text-xl font-semibold text-[#00509D] mb-2">
                 {marathon.title}
               </h2>
               <p className="text-sm text-gray-600 mb-2">

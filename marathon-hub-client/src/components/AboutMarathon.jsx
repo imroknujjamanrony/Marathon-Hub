@@ -1,13 +1,13 @@
 const AboutMarathon = () => {
   return (
     <div
-      className="text-center rounded-lg  py-16 bg-gradient-to-r from-[#003f63] via-[#00AEEF] to-[#006c8e] text-gray-800 dark:text-gray-200"
+      className="text-center rounded-lg  py-16  bg-gray-100 text-gray-800 dark:text-gray-200"
       data-aos="fade-up"
     >
-      <h2 className="text-4xl md:text-5xl font-extrabold text-[#FFB21C]">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-[#002e62]">
         Marathon Hub: Turning Races Into Achievements
       </h2>
-      <p className="mt-4 text-lg text-white font-medium">
+      <p className="mt-4 text-lg text-gray-700 font-medium">
         Marathon Hub is where runners become champions. Whether it’s raising
         awareness for a cause, supporting local communities, or pushing your
         limits, our platform connects participants, organizers, and supporters
@@ -16,7 +16,7 @@ const AboutMarathon = () => {
       </p>
 
       {/* Grid Section */}
-      <div className="rounded-2xl mt-10 bg-[#004d6d] dark:bg-[#002e44] py-10">
+      <div className="rounded-2xl mt-10 bg-gray-100 py-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-6">
           {[
             {
@@ -50,7 +50,7 @@ const AboutMarathon = () => {
                 src={item.src}
                 alt={item.title}
               />
-              <h2 className="pt-2 text-sm md:text-base text-white">
+              <h2 className="pt-2 text-sm md:text-base text-[#00509D]">
                 {item.title}
               </h2>
             </div>
