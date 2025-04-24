@@ -8,6 +8,21 @@ import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 
 const Slider = () => {
+  const slides = [
+    {
+      img: "https://i.ibb.co/GFvys0Z/marathon-1.jpg",
+      text: "Join the ultimate challenge.",
+    },
+    {
+      img: "https://i.ibb.co/cx81Kww/marathon-2.jpg",
+      text: "Experience the joy of running together.",
+    },
+    {
+      img: "https://i.ibb.co/09mQ2Wz/marathon-3.jpg",
+      text: "Push your limits.",
+    },
+  ];
+
   return (
     <div className="py-3">
       <Swiper
@@ -15,118 +30,48 @@ const Slider = () => {
         modules={[Navigation, Autoplay]}
         slidesPerView={1}
         navigation
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 3000 }}
       >
-        {/* First Slide */}
-        <SwiperSlide>
-          <div className="relative w-full h-[500px]">
-            <img
-              className="w-full h-full object-cover"
-              src="https://i.ibb.co/GFvys0Z/marathon-1.jpg"
-              alt="Beautiful Landscape"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-              <h2 className="text-5xl text-[#FFD95F] font-bold">
-                <Typewriter
-                  words={[
-                    "Run for Hope: Annual Charity Marathon",
-                    "City Lights Half Marathon 2024",
-                    "Trail Blazers Ultra Run Challenge",
-                  ]}
-                  loop={true}
-                  cursor
-                  cursorStyle="_"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </h2>
-              <p className="text-2xl text-white pb-3 font-medium">
-                Join the ultimate challenge.
-              </p>
-              <Link to={"/marathons"}>
-                <button className="btn btn-sm bg-[#0078D4] btn-outline text-white hover:bg-red-600">
-                  See Marathons
-                </button>
-              </Link>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative w-full h-[500px]">
+              <img
+                className="w-full h-full object-cover"
+                src={slide.img}
+                alt={`slide-${index}`}
+              />
+              {/* Strong overlay */}
+              <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
+              {/* Gradient from bottom */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-20" />
+              <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-center px-4">
+                <h2 className="text-4xl md:text-5xl font-bold text-[#FFD95F] drop-shadow-lg">
+                  <Typewriter
+                    words={[
+                      "Run for Hope: Annual Charity Marathon",
+                      "City Lights Half Marathon 2024",
+                      "Trail Blazers Ultra Run Challenge",
+                    ]}
+                    loop={true}
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                  />
+                </h2>
+                <p className="text-lg md:text-2xl text-white font-medium mt-4 drop-shadow-sm">
+                  {slide.text}
+                </p>
+                <Link to="/marathons">
+                  <button className="mt-5 btn btn-sm bg-[#0078D4] btn-outline text-white hover:bg-red-600 transition duration-300">
+                    See Marathons
+                  </button>
+                </Link>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-
-        {/* Second Slide */}
-        <SwiperSlide>
-          <div className="relative w-full h-[500px]">
-            <img
-              className="w-full h-full object-cover"
-              src="https://i.ibb.co/cx81Kww/marathon-2.jpg"
-              alt="Peaceful Forest"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-              <h2 className="text-5xl text-[#FFD95F] font-bold">
-                <Typewriter
-                  words={[
-                    "Run for Hope: Annual Charity Marathon",
-                    "City Lights Half Marathon 2024",
-                    "Trail Blazers Ultra Run Challenge",
-                  ]}
-                  loop={true}
-                  cursor
-                  cursorStyle="_"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </h2>
-              <p className="text-2xl text-white pb-3 font-medium">
-                Experience the joy of running together.
-              </p>
-              <Link to={"/marathons"}>
-                <button className="btn btn-sm bg-[#0078D4] btn-outline text-white hover:bg-red-600">
-                  See Marathons
-                </button>
-              </Link>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        {/* Third Slide */}
-        <SwiperSlide>
-          <div className="relative w-full h-[500px]">
-            <img
-              className="w-full h-full object-cover"
-              src="https://i.ibb.co/09mQ2Wz/marathon-3.jpg"
-              alt="Another Scene"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-              <h2 className="text-5xl text-[#FFD95F] font-bold">
-                <Typewriter
-                  words={[
-                    "Run for Hope: Annual Charity Marathon",
-                    "City Lights Half Marathon 2024",
-                    "Trail Blazers Ultra Run Challenge",
-                  ]}
-                  loop={true}
-                  cursor
-                  cursorStyle="_"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </h2>
-              <p className="text-2xl text-white pb-3 font-medium">
-                Push your limits.
-              </p>
-              <Link to={"/marathons"}>
-                <button className="btn btn-sm bg-[#0078D4] btn-outline text-white hover:bg-red-600">
-                  See Marathons
-                </button>
-              </Link>
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

@@ -6,6 +6,9 @@ import Legacy from "../components/Legacy";
 import AboutMarathon from "../components/AboutMarathon";
 import ReviewSection from "../components/ReviewSection";
 import Partner from "../components/Partner";
+import Stats from "../components/Stats";
+import Countdown from "../components/Countdown";
+import GeminiUi from "../components/gemini/GeminiUi";
 
 const Home = () => {
   return (
@@ -17,6 +20,9 @@ const Home = () => {
       <section className="bg-gray-100 dark:bg-gray-900 text-white py-12">
         <AboutMarathon></AboutMarathon>
         <Partner></Partner>
+        <GeminiUi></GeminiUi>
+        <Countdown></Countdown>
+        <Stats></Stats>
         <Legacy></Legacy>
         <RunningMarathon></RunningMarathon>
         <UpcomingMarathons></UpcomingMarathons>
