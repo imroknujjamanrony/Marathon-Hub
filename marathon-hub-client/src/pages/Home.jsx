@@ -19,14 +19,14 @@ const Home = () => {
       <Slider></Slider>
       <section className="bg-gray-100 dark:bg-gray-900 text-white py-12">
         <AboutMarathon></AboutMarathon>
-        <Partner></Partner>
-        <GeminiUi></GeminiUi>
         <Countdown></Countdown>
         <Stats></Stats>
         <Legacy></Legacy>
         <RunningMarathon></RunningMarathon>
         <UpcomingMarathons></UpcomingMarathons>
         <ReviewSection></ReviewSection>
+        <Partner></Partner>
+        <GeminiUi></GeminiUi>
       </section>
     </div>
   );
