@@ -96,7 +96,9 @@ const AddMarathon = () => {
         <title>Add Marathon</title>
       </Helmet>
       <div className="card w-full max-w-3xl bg-base-100 shadow-lg p-6">
-        <h2 className="text-2xl font-bold text-center mb-4">Add Marathon</h2>
+        <h2 className="text-2xl font-bold text-center mb-4 dark:text-[#c3c400]">
+          Add Marathon
+        </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="form-control">
             <label className="label">
@@ -229,7 +231,9 @@ const AddMarathon = () => {
           </div>
 
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Submit</button>
+            <button className="mt-4 px-4 py-2 rounded-lg bg-[#00509D] hover:bg-[#003f7d] text-white font-medium transition duration-300">
+              submit
+            </button>
           </div>
         </form>
       </div>
