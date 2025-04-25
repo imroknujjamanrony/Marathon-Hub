@@ -74,6 +74,10 @@ const router = createBrowserRouter([
         ),
         children: [
           {
+            index: true, // ✅ Default overview
+            element: <div></div>, // Optional empty, since overview is in layout
+          },
+          {
             path: "addMarathon",
             element: <AddMarathon></AddMarathon>,
           },

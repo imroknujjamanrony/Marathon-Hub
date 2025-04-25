@@ -34,7 +34,7 @@ const Slider = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-[500px]">
+            <div className="relative w-full h-[545px]">
               <img
                 className="w-full h-full object-cover"
                 src={slide.img}
@@ -45,7 +45,7 @@ const Slider = () => {
               {/* Gradient from bottom */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-20" />
               <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-center px-4">
-                <h2 className="text-4xl md:text-5xl font-bold text-[#FFD95F] drop-shadow-lg">
+                <h2 className="text-4xl md:text-5xl font-bold text-[#c3c400] drop-shadow-lg">
                   <Typewriter
                     words={[
                       "Run for Hope: Annual Charity Marathon",
@@ -60,12 +60,12 @@ const Slider = () => {
                     delaySpeed={1000}
                   />
                 </h2>
-                <p className="text-lg md:text-2xl text-white font-medium mt-4 drop-shadow-sm">
+                <p className="text-lg md:text-2xl text-white font-medium py-3 mt-4 drop-shadow-sm">
                   {slide.text}
                 </p>
                 <Link to="/marathons">
-                  <button className="mt-5 btn btn-sm bg-[#0078D4] btn-outline text-white hover:bg-red-600 transition duration-300">
-                    See Marathons
+                  <button className="px-4 py-1 border border-white text-white rounded hover:bg-white hover:text-[#EA738D] transition">
+                    See marathons
                   </button>
                 </Link>
               </div>

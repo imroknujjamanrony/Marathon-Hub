@@ -19,14 +19,20 @@ const Navbar = () => {
     }
   };
 
+  const navLinkClass =
+    "text-white dark:text-[#EA738D] font-medium hover:text-[#519B52] transition";
+
   return (
-    <nav className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white p-4 sticky top-0 z-50 backdrop-blur-md">
+    <nav className="bg-[#89ABE3] dark:bg-[#6D394D] text-white p-4 sticky top-0 z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Left Section - Logo & Mobile Menu */}
         <div className="flex items-center gap-4">
           {/* Mobile Menu */}
           <div className="dropdown lg:hidden">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label
+              tabIndex={0}
+              className="btn btn-sm bg-white text-[#6D394D] hover:bg-[#EA738D] hover:text-white transition"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -44,17 +50,23 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content mt-3 p-2 shadow bg-gray-200 rounded-box w-52"
+              className="dropdown-content mt-3 p-2 shadow bg-[#EA738D] text-white rounded-box w-52"
             >
               <li>
-                <NavLink to="/marathons">Marathons</NavLink>
+                <NavLink to="/marathons" className={navLinkClass}>
+                  Marathons
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard">Dashboard</NavLink>
+                <NavLink to="/dashboard" className={navLinkClass}>
+                  Dashboard
+                </NavLink>
               </li>
               {user && (
                 <li>
-                  <NavLink to="/myProfile">Profile</NavLink>
+                  <NavLink to="/myProfile" className={navLinkClass}>
+                    Profile
+                  </NavLink>
                 </li>
               )}
             </ul>
@@ -63,7 +75,9 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img className="w-10" src={logo} alt="Marathon Hub Logo" />
-            <span className="text-xl font-bold">Marathon Hub</span>
+            <span className="text-xl font-bold text-white dark:text-[#EA738D]">
+              Marathon Hub
+            </span>
           </Link>
         </div>
 
@@ -71,14 +85,26 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           {/* Desktop Menu */}
           <div className="hidden lg:flex gap-4">
-            <NavLink to="/marathons">Marathons</NavLink>
-            <NavLink to="/dashboard">Dashboard</NavLink>
+            <NavLink to="/marathons" className={navLinkClass}>
+              Marathons
+            </NavLink>
+            <NavLink to="/dashboard" className={navLinkClass}>
+              Dashboard
+            </NavLink>
             {user && (
               <>
-                <NavLink to="/myProfile">Profile</NavLink>
-                <NavLink to="/dashboard/addMarathon">Add Marathon</NavLink>
-                <NavLink to="/dashboard/myMarathon">My Marathon</NavLink>
-                <NavLink to="/dashboard/myApplylist">My Applylist</NavLink>
+                <NavLink to="/myProfile" className={navLinkClass}>
+                  Profile
+                </NavLink>
+                <NavLink to="/dashboard/addMarathon" className={navLinkClass}>
+                  Add Marathon
+                </NavLink>
+                <NavLink to="/dashboard/myMarathon" className={navLinkClass}>
+                  My Marathon
+                </NavLink>
+                <NavLink to="/dashboard/myApplylist" className={navLinkClass}>
+                  My Applylist
+                </NavLink>
               </>
             )}
           </div>
@@ -86,15 +112,14 @@ const Navbar = () => {
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white transition"
+            className="p-2 rounded-full bg-white text-[#6D394D] hover:bg-[#EA738D] hover:text-white transition"
           >
-            {theme === "dark" ? <FiSun size={24} /> : <FiMoon size={24} />}
+            {theme === "dark" ? <FiSun size={20} /> : <FiMoon size={20} />}
           </button>
 
           {/* User Profile & Authentication */}
           {user ? (
             <div className="flex items-center gap-2">
-              {/* User Avatar */}
               <div
                 className="tooltip tooltip-bottom"
                 data-tip={user.displayName || "User"}
@@ -103,10 +128,10 @@ const Navbar = () => {
                   <img
                     src={user.photoURL}
                     alt="User Avatar"
-                    className="w-8 h-8 rounded-full"
+                    className="w-8 h-8 rounded-full border-2 border-white"
                   />
                 ) : (
-                  <div className="w-8 h-8 rounded-full bg-gray-500 flex justify-center items-center">
+                  <div className="w-8 h-8 rounded-full bg-white text-[#6D394D] flex justify-center items-center font-bold">
                     {user.displayName
                       ? user.displayName.charAt(0).toUpperCase()
                       : "U"}
@@ -114,10 +139,9 @@ const Navbar = () => {
                 )}
               </div>
 
-              {/* Logout Button */}
               <button
                 onClick={handleLogout}
-                className="btn btn-sm bg-blue-600 text-white hover:bg-red-600"
+                className="px-4 py-1 border border-white text-white rounded hover:bg-white hover:text-[#EA738D] transition"
               >
                 Logout
               </button>
@@ -125,7 +149,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/login"
-              className="btn btn-sm bg-blue-600 text-white hover:bg-red-600"
+              className="px-4 py-1 bg-[#EA738D] text-white rounded hover:bg-[#519B52] transition"
             >
               Login
             </Link>

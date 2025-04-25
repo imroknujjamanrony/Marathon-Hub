@@ -2,24 +2,24 @@ const Legacy = () => {
   return (
     <div
       id="about"
-      className="flex flex-col md:flex-row gap-6 bg-white p-6 md:p-8 rounded-sm shadow-lg backdrop-blur-lg"
+      className="flex flex-col md:flex-row gap-6 bg-white dark:bg-gray-900 p-6 md:p-8 rounded-sm shadow-lg backdrop-blur-lg"
       data-aos="flip-down"
     >
       {/* Left Image */}
       <div className="flex-shrink-0 md:w-1/2">
         <img
           className="w-full h-auto max-h-96 object-cover rounded-xl shadow-md"
-          src="https://i.ibb.co.com/GFvys0Z/marathon-1.jpg"
-          alt="Marathon Event"
+          src="https://i.ibb.co/GFvys0Z/marathon-1.jpg"
+          alt="Participants running in a city marathon event"
         />
       </div>
 
       {/* Right Content */}
       <div className="md:w-1/2">
-        <h2 className="text-[#005F99] text-3xl md:text-4xl font-semibold mb-4">
+        <h2 className="text-[#c3c400] dark:text-teal-300 text-3xl md:text-4xl font-semibold mb-4">
           Empowering Runners, Creating Memories
         </h2>
-        <p className="text-lg text-gray-700 font-normal leading-relaxed">
+        <p className="text-lg text-gray-700 dark:text-gray-300 font-normal leading-relaxed">
           At Marathon Hub, we believe in bringing communities together through
           the spirit of running. Whether you're organizing a charity marathon, a
           corporate race, or a fun run, our platform makes it easier than ever

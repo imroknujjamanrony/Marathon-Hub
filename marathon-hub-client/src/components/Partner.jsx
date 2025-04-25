@@ -6,20 +6,20 @@ const Partner = () => {
   ];
 
   return (
-    <div className="py-10 px-4 max-w-7xl mx-auto text-center">
-      <h2 className="text-3xl font-bold text-teal-500 mb-8">
+    <div className="py-10 px-4  mx-auto text-center  dark:bg-gray-900">
+      <h2 className="text-3xl font-bold text-[#6D394D] dark:text-teal-300 py-4 mb-8">
         Meet Our Programme Partners
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid w-11/12 mx-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {partners.map((url, idx) => (
           <div
             key={idx}
-            className="bg-white rounded-2xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300"
+            className="bg-white dark:bg-[#1f1f1f] text-[#333] dark:text-gray-200 rounded-2xl shadow-md overflow-hidden transform hover:scale-105 transition duration-300"
           >
             <img
               src={url}
               alt={`partner-${idx}`}
-              className="w-full h-48 object-cover"
+              className="w-full h-36 object-cover"
             />
           </div>
         ))}

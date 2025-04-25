@@ -34,9 +34,9 @@ const reviews = [
 
 const ReviewSection = () => {
   return (
-    <section className="py-12 bg-gray-100 dark:bg-gray-900">
+    <section className="py-12  dark:bg-gray-900">
       <div className="w-11/12 mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#c3c400] dark:text-teal-300 mb-6">
           What Runners Say
         </h2>
         <Swiper
@@ -49,14 +49,14 @@ const ReviewSection = () => {
         >
           {reviews.map((review) => (
             <SwiperSlide key={review.id}>
-              <div className="bg-white p-6 shadow-lg rounded-xl flex flex-col items-center text-center relative">
-                <FaQuoteLeft className="text-5xl text-blue-500 absolute -top-6 left-6 opacity-20" />
+              <div className="bg-white dark:bg-gray-900 p-6 shadow-lg rounded-xl flex flex-col items-center text-center relative">
+                <FaQuoteLeft className="text-5xl text-[#519B52] absolute -top-6 left-6 opacity-20" />
                 <img
                   src={review.image}
                   alt={review.name}
-                  className="w-20 h-20 rounded-full border-4 border-blue-500 shadow-md mb-4"
+                  className="w-20 h-20 rounded-full border-4 border-[#EA738D] shadow-md mb-4"
                 />
-                <h3 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-xl font-semibold text-[#333] dark:text-gray-100">
                   {review.name}
                 </h3>
                 <div className="flex justify-center gap-1 text-yellow-400 my-2">
@@ -65,7 +65,7 @@ const ReviewSection = () => {
                   ))}
                   {review.rating % 1 !== 0 && <FaStarHalfAlt />}
                 </div>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
                   {review.review}
                 </p>
               </div>

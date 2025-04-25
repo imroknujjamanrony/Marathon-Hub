@@ -2,15 +2,17 @@ import Countdown from "react-countdown";
 
 const MyCountdown = () => {
   return (
-    <div className="bg-[#1f1f1f] text-white px-6 py-8 flex flex-col lg:flex-row justify-between items-center rounded-xl shadow-lg gap-6">
+    <div className="bg-white dark:bg-gray-900 text-white px-12  py-8 flex flex-col lg:flex-row justify-between items-center shadow-lg gap-6">
       {/* Left - Marathon Info */}
       <div>
         <h2 className="text-3xl font-extrabold text-[#c3c400] uppercase mb-2">
           Upcoming Marathon
         </h2>
-        <p className="text-lg font-medium text-gray-300">
+        <p className="text-lg font-medium text-gray-400">
           Get ready for the challenge —{" "}
-          <span className="text-white font-semibold">August 12-13, 2025</span>
+          <span className="text-gray-400 font-semibold">
+            August 12-13, 2025
+          </span>
         </p>
       </div>
 
