@@ -24,7 +24,7 @@ const Slider = () => {
   ];
 
   return (
-    <div className="py-3">
+    <div className="py-3 w full h-screen">
       <Swiper
         spaceBetween={20}
         modules={[Navigation, Autoplay]}
@@ -34,7 +34,7 @@ const Slider = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full h-[545px]">
+            <div className="relative w-full h-screen">
               <img
                 className="w-full h-full object-cover"
                 src={slide.img}
